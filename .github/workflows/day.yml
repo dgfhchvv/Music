@@ -17,14 +17,14 @@ jobs:
         sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
         date
     - name: 安装网易云api
-      run:  git clone https://github.com/Binaryify/NeteaseCloudMusicApi.git
+      run: git clone https://github.com/shanghaobo/NeteaseCloudMusicApi.git
     - name: 运行网易云api
       run: |
         cd NeteaseCloudMusicApi
         npm install
         nohup node app.js &
     - name: 安装并脚本
-      run: git clone https://github.com/shanghaobo/NeteaseCloudMusicApi.git
+      run: git clone https://github.com/shanghaobo/NeteaseCloudMusicDay.git
     - name: 设置api
       run: echo "api='http://127.0.0.1:3000'" >> NeteaseCloudMusicDay/config.py
     - name: 设置网易云音乐登录账号
@@ -32,4 +32,4 @@ jobs:
     - name: 设置网易云音乐登录密码
       run: echo "password='men851103'" >> NeteaseCloudMusicDay/config.py
     - name: 运行脚本
-      run: python3 NeteaseCloudMusicDay/main.py
+      run: python3 NeteaseCloudMusicDay/main2.py
