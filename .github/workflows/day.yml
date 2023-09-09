@@ -24,7 +24,7 @@ jobs:
         npm install
         nohup node app.js &
     - name: 安装并脚本
-      run: git clone https://github.com/shanghaobo/NeteaseCloudMusicDay.git
+      run: git clone https://github.com/Binaryify/NeteaseCloudMusicApi.git
     - name: 设置api
       run: echo "api='http://127.0.0.1:3000'" >> NeteaseCloudMusicDay/config.py
     - name: 设置网易云音乐登录账号
