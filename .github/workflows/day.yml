@@ -17,7 +17,7 @@ jobs:
         sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
         date
     - name: 安装网易云api
-      run: git clone https://github.com/Binaryify/NeteaseCloudMusicApi.git
+      run:  git clone https://github.com/Binaryify/NeteaseCloudMusicApi.git
     - name: 运行网易云api
       run: |
         cd NeteaseCloudMusicApi
@@ -32,4 +32,4 @@ jobs:
     - name: 设置网易云音乐登录密码
       run: echo "password='men851103'" >> NeteaseCloudMusicDay/config.py
     - name: 运行脚本
-      run: python3 NeteaseCloudMusicDay/main2.py
+      run: python3 NeteaseCloudMusicDay/main.py
